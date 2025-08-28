@@ -18,6 +18,13 @@ deployment "complex" {
   destroy = false
 }
 
+deployment "semi-complex" {
+  inputs = {
+    prefix           = "complex"
+    instances        = 2
+  }
+}
+
 deployment_group "simple" {
   auto_approve_checks = [deployment_auto_approve.no_destroy]
 }
