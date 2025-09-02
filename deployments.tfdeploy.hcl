@@ -7,7 +7,7 @@ deployment "simple" {
     prefix           = "simple"
     instances        = 1
   }
-  deployment_group = deployment_group.simple
+  deployment_group = deployment_group.simpl
 }
 
 deployment "complex" {
