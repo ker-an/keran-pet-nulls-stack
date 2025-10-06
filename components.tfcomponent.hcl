@@ -38,12 +38,10 @@ component "pet" {
 }
 
 component "nulls" {
-  # source = "./nulls"
-  source = "git::https://github.com/ker-an/terraform-provider-bombnull.git"
-
+  source = "./nulls"
   inputs = {
     pet       = component.pet.name
-    instances = var.instances
+    instances = "none"
   }
 
   providers = {
