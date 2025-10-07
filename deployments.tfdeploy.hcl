@@ -15,6 +15,7 @@ deployment "complex" {
     prefix           = "complex"
     instances        = 5
   }
+  deployment_group = "complex"
 }
 
 deployment "semi-complex" {
@@ -22,6 +23,7 @@ deployment "semi-complex" {
     prefix           = "complex"
     instances        = 2
   }
+  deployment_group = "complex"
 }
 
 deployment_group "simple" {
