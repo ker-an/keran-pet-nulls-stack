@@ -23,7 +23,6 @@ deployment "semi-complex" {
     prefix           = "complex"
     instances        = 3
   }
-  deployment_group = deployment_group.complex
 }
 
 deployment_group "simple" {
