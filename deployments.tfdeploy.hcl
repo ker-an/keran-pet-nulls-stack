@@ -15,7 +15,7 @@ deployment "complex" {
     prefix           = "complex"
     instances        = 4
   }
-  deployment_group = "complex"
+  deployment_group = deployment_group.complex
 }
 
 deployment "semi-complex" {
@@ -23,12 +23,14 @@ deployment "semi-complex" {
     prefix           = "complex"
     instances        = 3
   }
-  deployment_group = "complex"
+  deployment_group = deployment_group.complex
 }
 
 deployment_group "simple" {
   auto_approve_checks = [deployment_auto_approve.no_destroy]
 }
+
+deployment_group "complex" {}
 
 deployment_auto_approve "no_destroy" {
   check {
