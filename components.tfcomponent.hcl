@@ -37,18 +37,6 @@ component "pet" {
   }
 }
 
-component "nulls" {
-  source = "./nulls"
-  inputs = {
-    pet       = component.pet.name
-    instances = var.instances
-  }
-
-  providers = {
-    null = provider.null.this
-  }
-}
-
 removed {
   source = "./nulls"
   from   = component.nulls
