@@ -48,3 +48,12 @@ component "nulls" {
     null = provider.null.this
   }
 }
+
+removed {
+  source = "./nulls"
+  from   = component.nulls
+
+  providers = {
+    null = provider.null.this
+  }
+}
